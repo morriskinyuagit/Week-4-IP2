@@ -23,4 +23,5 @@ services:
       - ./client/public:/srv/app/admin-client/public
     command: npm run start
     networks:
-      - yolo-network
+      yolo-network:
+       driver: bridge

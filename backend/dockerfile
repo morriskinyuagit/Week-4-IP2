@@ -1,13 +1,13 @@
 FROM node:alpine3.18
 # Working Directory
 # set the working directory
-RUN mkdir -p /srv/app/admin-server
-WORKDIR /srv/app/admin-server
+RUN mkdir -p /IP2/admin-server
+WORKDIR /IP2/admin-server
 # Copy the package.json file to the working directory
-COPY package*.json /srv/app/admin-server
+COPY package*.json /IP2/admin-server
 # Install the dependencies
 RUN npm install --silent
 # Copying the rest of the files to the working directory
-COPY . /srv/app/admin-server
+COPY . /IP2/admin-server
 # Running the app
 CMD ["npm", "start"]

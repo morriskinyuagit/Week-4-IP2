@@ -1,15 +1,15 @@
 # Create base image
 FROM node:alpine3.18
 # set the working directory
-RUN mkdir -p /srv/app/admin-client
-WORKDIR /srv/app/admin-client
+RUN mkdir -p /IP2/admin-client
+WORKDIR /IP2/admin-client
 # Copy the package.json files to the working directory
-COPY package*.json /srv/app/admin-client
+COPY package*.json /IP2/admin-client
 # Install the dependencies
 RUN npm install --silent
 # RUN npm install react-scripts@3.3.1 -g --silent
 # Copy the rest of the files to the working directory
-COPY . /srv/app/admin-client
 EXPOSE 3000
+COPY . /IP2/admin-client
 # Run the app
 CMD ["npm", "start"]

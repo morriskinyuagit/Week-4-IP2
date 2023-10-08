@@ -1,7 +1,8 @@
 version: "3.7"
 services:
   backend:
-    build: ./backend
+    #build: ./backend
+    image: morrismurithi/ip2backend:1.0.2
     expose:
       - 5000
     ports:
@@ -13,7 +14,8 @@ services:
       - IP2-network
 
   client:
-    build: ./client
+    #build: ./client
+    image: morrismurithi/ip2client:1.0.2
     expose:
       - 3000
     ports:

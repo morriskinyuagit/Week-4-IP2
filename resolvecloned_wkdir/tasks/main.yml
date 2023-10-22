@@ -1,2 +1,18 @@
 ---
 # tasks file for resolvecloned_wkdir
+- name: Week-4-IP2
+  git:
+        repo: https://github.com/morriskinyuagit/Week-4-IP2.git
+        dest: /home/ubuntu/week6
+        update: yes
+
+- name: Setting the wkdir to the cloned folder
+  command: cd /home/ubuntu/week6
+  args:
+        chdir: /home/ubuntu/week6
+        creates: /home/ubuntu/week6
+
+- name: Run Docker Compose
+  command: docker-compose up -d
+  args:
+    chdir: /home/ubuntu/week6  # Change the working directory to the cloned folder

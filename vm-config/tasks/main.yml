@@ -1,6 +1,5 @@
 ---
 # tasks file for vm-config
----
 - name: Update&Upgrade
   ansible.builtin.apt:
     name: aptitude

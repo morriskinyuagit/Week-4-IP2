@@ -1,5 +1,5 @@
 ---
-- name: Setup Yolo on Ubuntu Server 22.04
+- name: Setup wk6 on Ubuntu Server 22.04
   hosts: all
   become: true
   remote_user: root
@@ -13,3 +13,5 @@
 
   - vm-config
   - docker-install
+  - resolvecloned_wkdir
+

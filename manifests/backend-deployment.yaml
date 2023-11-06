@@ -27,8 +27,8 @@ spec:
               containerPort: 5000
           resources:
             limits:
-              cpu: "0.5"
-              memory: "512Mi"
+              cpu: "0.2"
+              memory: "256Mi"
           volumeMounts:
             - name: data
               mountPath: /data

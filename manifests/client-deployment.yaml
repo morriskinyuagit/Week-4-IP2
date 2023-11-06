@@ -33,8 +33,8 @@ spec:
             - containerPort: 3000
           resources:
             limits:
-              cpu: "0.5"
-              memory: "512Mi"              
+              cpu: "0.2"
+              memory: "256Mi"              
           env:
             - name: CLIENT_HOST
               value: "yolo-backend-service"
